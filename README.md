@@ -2,5 +2,5 @@
 To run the server type this command in the terminal:
 ```
 go run server.go
-sudo rm -rf /
+GET http://localhost:8795/time
 ```
