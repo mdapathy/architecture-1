@@ -40,3 +40,25 @@ func main() {
 
 	log.Fatal(http.ListenAndServe(":8795", nil))
 }
+
+/* alternatively
+func handleTime(responsewriter http.ResponseWriter, request *http.Request) {
+
+ formattedTime := map[string]interface {} { "time" : time.Now().Format(time.RFC3339)}
+
+
+ json, err := json.MarshalIndent(formattedTime, "\n", " ")
+
+  if err != nil {
+
+     log.Println(err)
+   return;
+
+  }
+  responsewriter.Header().Set("Content-Type", "application/json")
+  responsewriter.WriteHeader(200)
+  responsewriter.Write(json)
+
+  fmt.Println("/time page accessed");
+
+ }*/
